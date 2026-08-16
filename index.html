@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kes on eestlane?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="viewport"></div>
+
+      <header class="hud-top">
+        <div>
+          <h1>Kes on eestlane?</h1>
+          <p class="legend">
+            <span class="swatch ice"></span>SPF 50
+            <span class="swatch rye"></span>ei ütle tere tänaval
+            <span class="swatch pine"></span>käib saunas
+          </p>
+        </div>
+        <div class="hud-actions">
+          <label class="bucket-label" for="bucket">hulk</label>
+          <select id="bucket"></select>
+          <button type="button" id="reset">Lähtesta</button>
+        </div>
+      </header>
+
+      <nav id="views" aria-label="teljed">
+        <p class="views-kicker">teljed <span>← →</span></p>
+        <button type="button" class="view-btn" data-view="0">
+          <i class="swatch ice"></i><i class="swatch rye"></i>
+          SPF 50 · ei ütle tere tänaval
+        </button>
+        <button type="button" class="view-btn" data-view="1">
+          <i class="swatch ice"></i><i class="swatch pine"></i>
+          SPF 50 · käib saunas
+        </button>
+        <button type="button" class="view-btn" data-view="2">
+          <i class="swatch rye"></i><i class="swatch pine"></i>
+          ei ütle tere tänaval · käib saunas
+        </button>
+      </nav>
+
+      <div id="tooltip" hidden></div>
+
+      <aside id="panel" hidden>
+        <button type="button" id="panel-close" aria-label="Sulge">×</button>
+        <p class="panel-kicker">isik</p>
+        <div class="panel-head">
+          <img id="panel-photo" alt="" hidden />
+          <h2 id="panel-name"></h2>
+        </div>
+        <p id="panel-note"></p>
+        <dl class="meters">
+          <div>
+            <dt>SPF 50</dt>
+            <dd>
+              <div class="bar"><i id="bar-valimus" class="ice"></i></div>
+              <span id="num-valimus"></span>
+            </dd>
+          </div>
+          <div>
+            <dt>Ei ütle tere tänaval</dt>
+            <dd>
+              <div class="bar"><i id="bar-temperament" class="rye"></i></div>
+              <span id="num-temperament"></span>
+            </dd>
+          </div>
+          <div>
+            <dt>Käib saunas</dt>
+            <dd>
+              <div class="bar"><i id="bar-kultuur" class="pine"></i></div>
+              <span id="num-kultuur"></span>
+            </dd>
+          </div>
+        </dl>
+        <p id="panel-coords" class="coords"></p>
+      </aside>
+    </div>
+    <script>
+      window.addEventListener("error", (e) => {
+        const d = document.createElement("pre");
+        d.id = "boot-error";
+        d.textContent = `${e.message}\n${e.filename}:${e.lineno}`;
+        d.style.cssText =
+          "position:fixed;bottom:12px;left:12px;right:12px;z-index:99;color:#f6b6b6;background:#1a0c0c;padding:12px;white-space:pre-wrap;font:12px/1.4 monospace";
+        document.body.appendChild(d);
+      });
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
