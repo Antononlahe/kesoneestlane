@@ -1,0 +1,7 @@
+.git
+.gitignore
+roadmap.md
+AGENTS.md
+*.md
+scripts
+node_modules

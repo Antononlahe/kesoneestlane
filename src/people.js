@@ -9,7 +9,7 @@ export const people = [
     kultuur: 0.97,
     juured: 0.97,
     portrait: "portraits/arvo-part.jpg",
-    note: "Vaikus kui partituur.",
+    note: "Isegi muusika oli vaikne",
   },
   {
     id: "lennart-meri",
@@ -19,7 +19,6 @@ export const people = [
     kultuur: 0.89,
     juured: 0.95,
     portrait: "portraits/lennart-meri.jpg",
-    note: "Mets rääkis. Tema ka.",
   },
   {
     id: "carmen-kass",
@@ -49,7 +48,6 @@ export const people = [
     kultuur: 0.81,
     juured: 0.76,
     portrait: "portraits/tommy-cash.jpg",
-    note: "Eesti, aga valesti.",
   },
   {
     id: "kerli",
@@ -59,7 +57,7 @@ export const people = [
     kultuur: 0.72,
     juured: 0.89,
     portrait: "portraits/kerli.jpg",
-    note: "Metsahaldjas, mitte küla.",
+    note: "Metshaldjas",
   },
   {
     id: "kersti-kaljulaid",
@@ -69,7 +67,7 @@ export const people = [
     kultuur: 0.69,
     juured: 0.93,
     portrait: "portraits/kersti-kaljulaid.jpg",
-    note: "Korrektne. Liiga korrektne.",
+    note: "EU-CV",
   },
   {
     id: "kimi-raikkonen",
@@ -79,7 +77,7 @@ export const people = [
     kultuur: 0.55,
     juured: 0.09,
     portrait: "portraits/kimi-raikkonen.jpg",
-    note: "Temp. õige. Leib vale.",
+    note: "Bwoah",
   },
   {
     id: "elon-musk",
@@ -89,7 +87,7 @@ export const people = [
     kultuur: 0.04,
     juured: 0.03,
     portrait: "portraits/elon-musk.jpg",
-    note: "Nägu peaaegu. Leib mitte.",
+    note: "Marsimees",
   },
   {
     id: "jouluvana",
@@ -99,11 +97,10 @@ export const people = [
     kultuur: 0.64,
     juured: 0.14,
     portrait: "portraits/jouluvana.jpg",
-    note: "Lapimaa, mitte Võrumaa.",
   },
   {
     id: "typical-american",
-    name: "A typical American",
+    name: "Keskmine Ameeriklane",
     valimus: 0.22,
     temperament: 0.14,
     kultuur: 0,
@@ -113,13 +110,12 @@ export const people = [
   },
   {
     id: "latvian-neighbour",
-    name: "A Latvian neighbour",
+    name: "Lätlane",
     valimus: 0.8,
     temperament: 0.66,
     kultuur: 0.57,
     juured: 0.33,
     portrait: "portraits/latvian-neighbour.jpg",
-    note: "Lähedal. Mitte päris.",
   },
   {
     id: "konstantin-pats",
@@ -129,7 +125,7 @@ export const people = [
     kultuur: 0.88,
     juured: 0.97,
     portrait: "portraits/konstantin-pats.jpg",
-    note: "Vuntsid. Riik.",
+    note: "Vaikiv ajastu",
   },
   {
     id: "arnold-ruutel",
@@ -139,7 +135,7 @@ export const people = [
     kultuur: 0.86,
     juured: 0.96,
     portrait: "portraits/arnold-ruutel.jpg",
-    note: "Pausid kui poliitika.",
+    note: "palju õnne ja tahet jätkuvalt edaspidiseks!",
   },
   {
     id: "toomas-hendrik-ilves",
@@ -149,7 +145,7 @@ export const people = [
     kultuur: 0.7,
     juured: 0.76,
     portrait: "portraits/toomas-hendrik-ilves.jpg",
-    note: "Diasporaa. Räägib liiga.",
+    note: "Soome DJ",
   },
   {
     id: "alar-karis",
@@ -159,7 +155,6 @@ export const people = [
     kultuur: 0.85,
     juured: 0.93,
     portrait: "portraits/alar-karis.jpg",
-    note: "Muuseumivaikus.",
   },
   {
     id: "koit-toome",
@@ -169,7 +164,6 @@ export const people = [
     kultuur: 0.74,
     juured: 0.9,
     portrait: "portraits/koit-toome.jpg",
-    note: "Geel ja ballaad.",
   },
   {
     id: "loreen",
@@ -179,7 +173,7 @@ export const people = [
     kultuur: 0.38,
     juured: 0.03,
     portrait: "portraits/loreen.jpg",
-    note: "Torm. Vale meri.",
+    note: "Euphoria",
   },
   {
     id: "lordi",
@@ -189,7 +183,7 @@ export const people = [
     kultuur: 0.54,
     juured: 0.1,
     portrait: "portraits/lordi.jpg",
-    note: "Soome, aga lateks.",
+    note: "Hard Rock Hallelujah",
   },
   {
     id: "conchita-wurst",
@@ -199,7 +193,7 @@ export const people = [
     kultuur: 0.35,
     juured: 0.01,
     portrait: "portraits/conchita-wurst.jpg",
-    note: "Habe. Mitte Seto.",
+    note: "Habe",
   },
   {
     id: "verka-serduchka",
@@ -209,7 +203,7 @@ export const people = [
     kultuur: 0.36,
     juured: 0.04,
     portrait: "portraits/verka-serduchka.jpg",
-    note: "Naabri glämm.",
+    note: "Lasha Tumbai",
   },
   {
     id: "celine-dion",
@@ -219,7 +213,7 @@ export const people = [
     kultuur: 0.24,
     juured: 0.01,
     portrait: "portraits/celine-dion.jpg",
-    note: "Tunded. Liiga palju.",
+    note: "My heart will go on",
   },
   {
     id: "brad-pitt",
@@ -229,7 +223,6 @@ export const people = [
     kultuur: 0.14,
     juured: 0.03,
     portrait: "portraits/brad-pitt.jpg",
-    note: "Kahvatu nurk, mitte juur.",
   },
   {
     id: "scarlett-johansson",
@@ -239,7 +232,6 @@ export const people = [
     kultuur: 0.16,
     juured: 0.09,
     portrait: "portraits/scarlett-johansson.jpg",
-    note: "Kuuldavasti nordic.",
   },
   {
     id: "adam-driver",
@@ -249,7 +241,6 @@ export const people = [
     kultuur: 0.43,
     juured: 0.02,
     portrait: "portraits/adam-driver.jpg",
-    note: "Terav pale. Kylo.",
   },
   {
     id: "cate-blanchett",
@@ -259,7 +250,6 @@ export const people = [
     kultuur: 0.2,
     juured: 0.02,
     portrait: "portraits/cate-blanchett.jpg",
-    note: "Jäänaene. Sauna ei lähe.",
   },
   {
     id: "keanu-reeves",
@@ -269,7 +259,6 @@ export const people = [
     kultuur: 0.19,
     juured: 0.02,
     portrait: "portraits/keanu-reeves.jpg",
-    note: "Vaikne. Nägu piiripealne.",
   },
   {
     id: "margot-robbie",
@@ -279,7 +268,6 @@ export const people = [
     kultuur: 0.15,
     juured: 0.01,
     portrait: "portraits/margot-robbie.jpg",
-    note: "Barbie, mitte must leib.",
   },
   {
     id: "christopher-walken",
@@ -289,7 +277,6 @@ export const people = [
     kultuur: 0.18,
     juured: 0.02,
     portrait: "portraits/christopher-walken.jpg",
-    note: "Pausid. Vale küla.",
   },
   {
     id: "donald-trump",
@@ -299,7 +286,7 @@ export const people = [
     kultuur: 0.03,
     juured: 0.01,
     portrait: "portraits/donald-trump.jpg",
-    note: "Oranž. All on kahvatu.",
+    note: "you're fired",
   },
   {
     id: "angela-merkel",
@@ -309,7 +296,7 @@ export const people = [
     kultuur: 0.5,
     juured: 0.04,
     portrait: "portraits/angela-merkel.jpg",
-    note: "Hall. Vähe teater.",
+    note: "wir schaffen das",
   },
   {
     id: "alexander-stubb",
@@ -319,7 +306,6 @@ export const people = [
     kultuur: 0.53,
     juured: 0.11,
     portrait: "portraits/alexander-stubb.jpg",
-    note: "Soomlane, liiga suu.",
   },
   {
     id: "volodymyr-zelenskyy",
@@ -329,7 +315,7 @@ export const people = [
     kultuur: 0.32,
     juured: 0.05,
     portrait: "portraits/volodymyr-zelenskyy.jpg",
-    note: "Lava, siis riik.",
+    note: "Rahva teener",
   },
   {
     id: "emmanuel-macron",
@@ -339,7 +325,7 @@ export const people = [
     kultuur: 0.3,
     juured: 0.01,
     portrait: "portraits/emmanuel-macron.jpg",
-    note: "Pariis ei tea kama.",
+    note: "Jupiter en même temps",
   },
   {
     id: "sanna-marin",
@@ -349,7 +335,6 @@ export const people = [
     kultuur: 0.51,
     juured: 0.1,
     portrait: "portraits/sanna-marin.jpg",
-    note: "Soome rahu, mitte põrand.",
   },
   {
     id: "xi-jinping",
@@ -359,7 +344,6 @@ export const people = [
     kultuur: 0.01,
     juured: 0,
     portrait: "portraits/xi-jinping.jpg",
-    note: "Eestit pole kaardil.",
   },
   {
     id: "superman",
@@ -369,7 +353,6 @@ export const people = [
     kultuur: 0.07,
     juured: 0.01,
     portrait: "portraits/superman.jpg",
-    note: "Kansas, mitte Käsmu.",
   },
   {
     id: "batman",
@@ -379,7 +362,6 @@ export const people = [
     kultuur: 0.09,
     juured: 0.01,
     portrait: "portraits/batman.jpg",
-    note: "Vähe sõnu. Gotham.",
   },
   {
     id: "elsa",
@@ -389,7 +371,6 @@ export const people = [
     kultuur: 0.11,
     juured: 0.08,
     portrait: "portraits/elsa.jpg",
-    note: "Jää. Disney saun.",
   },
   {
     id: "thor",
@@ -399,7 +380,6 @@ export const people = [
     kultuur: 0.12,
     juured: 0.12,
     portrait: "portraits/thor.jpg",
-    note: "Nägu petab. Pidusöök.",
   },
   {
     id: "spider-man",
@@ -409,7 +389,6 @@ export const people = [
     kultuur: 0.08,
     juured: 0.01,
     portrait: "portraits/spider-man.jpg",
-    note: "Queens. Naljad.",
   },
   {
     id: "captain-america",
@@ -419,7 +398,6 @@ export const people = [
     kultuur: 0.05,
     juured: 0.01,
     portrait: "portraits/captain-america.jpg",
-    note: "Kilp, mitte lipp.",
   },
   {
     id: "tammsaare",
@@ -429,7 +407,6 @@ export const people = [
     kultuur: 1,
     juured: 0.97,
     portrait: "portraits/tammsaare.jpg",
-    note: "Tõde ja õigus.",
   },
   {
     id: "jaan-kross",
@@ -439,7 +416,6 @@ export const people = [
     kultuur: 0.92,
     juured: 0.96,
     portrait: "portraits/jaan-kross.jpg",
-    note: "Ajalugu eesti keeles.",
   },
   {
     id: "andrus-kivirahk",
@@ -449,7 +425,6 @@ export const people = [
     kultuur: 0.93,
     juured: 0.94,
     portrait: "portraits/andrus-kivirahk.jpg",
-    note: "Rehepapp elus.",
   },
   {
     id: "sofi-oksanen",
@@ -459,7 +434,6 @@ export const people = [
     kultuur: 0.62,
     juured: 0.52,
     portrait: "portraits/sofi-oksanen.jpg",
-    note: "Soome-eesti. Mitte täis.",
   },
   {
     id: "tolstoy",
@@ -469,7 +443,6 @@ export const people = [
     kultuur: 0.27,
     juured: 0.07,
     portrait: "portraits/tolstoy.jpg",
-    note: "Habe. Põhja vanamees.",
   },
   {
     id: "hemingway",
@@ -479,7 +452,7 @@ export const people = [
     kultuur: 0.22,
     juured: 0.02,
     portrait: "portraits/hemingway.jpg",
-    note: "Lühike lause. US.",
+    note: "nägi eestlasi sadamas",
   },
   {
     id: "kafka",
@@ -489,7 +462,6 @@ export const people = [
     kultuur: 0.26,
     juured: 0.05,
     portrait: "portraits/kafka.jpg",
-    note: "Praha ülikond. Mitte mets.",
   },
   {
     id: "tanel-padar",
@@ -499,7 +471,6 @@ export const people = [
     kultuur: 0.76,
     juured: 0.92,
     portrait: "portraits/tanel-padar.jpg",
-    note: "Everybody. Siit.",
   },
   {
     id: "christopher-nolan",
@@ -509,7 +480,6 @@ export const people = [
     kultuur: 0.47,
     juured: 0.01,
     portrait: "portraits/christopher-nolan.jpg",
-    note: "Tenet. Linnahall.",
   },
   {
     id: "robert-pattinson",
@@ -519,7 +489,7 @@ export const people = [
     kultuur: 0.42,
     juured: 0.02,
     portrait: "portraits/robert-pattinson.jpg",
-    note: "Oli Tallinnas. Läks ära.",
+    note: "Team Edward",
   },
   {
     id: "mads-mikkelsen",
@@ -529,7 +499,6 @@ export const people = [
     kultuur: 0.28,
     juured: 0.08,
     portrait: "portraits/mads-mikkelsen.jpg",
-    note: "Vaikus. Vale meri.",
   },
   {
     id: "kaja-kallas",
@@ -539,7 +508,6 @@ export const people = [
     kultuur: 0.68,
     juured: 0.92,
     portrait: "portraits/kaja-kallas.jpg",
-    note: "Brüssel. Ikkagi siit.",
   },
   {
     id: "joe-biden",
@@ -549,7 +517,6 @@ export const people = [
     kultuur: 0.31,
     juured: 0.01,
     portrait: "portraits/joe-biden.jpg",
-    note: "NATO. Üks visiit.",
   },
   {
     id: "barack-obama",
@@ -559,7 +526,7 @@ export const people = [
     kultuur: 0.45,
     juured: 0.01,
     portrait: "portraits/barack-obama.jpg",
-    note: "Vabaduse väljak. Üks kord.",
+    note: "yes we can",
   },
   {
     id: "lotte",
@@ -569,7 +536,6 @@ export const people = [
     kultuur: 0.96,
     juured: 0.95,
     portrait: "portraits/lotte.jpg",
-    note: "Koer. Aga meie koer.",
   },
   {
     id: "kalevipoeg",
@@ -579,7 +545,6 @@ export const people = [
     kultuur: 0.99,
     juured: 1,
     portrait: "portraits/kalevipoeg.jpg",
-    note: "Rahvuseepos. Viht kaasas.",
   },
   {
     id: "muumitroll",
@@ -589,7 +554,6 @@ export const people = [
     kultuur: 0.59,
     juured: 0.12,
     portrait: "portraits/muumitroll.jpg",
-    note: "Soome vaikus. Mitte kalevipoeg.",
   },
   {
     id: "george-w-bush",
@@ -599,7 +563,7 @@ export const people = [
     kultuur: 0.46,
     juured: 0.01,
     portrait: "portraits/george-w-bush.jpg",
-    note: "Welcome to NATO.",
+    note: "Welcome to NATO",
   },
   {
     id: "dave-benton",
@@ -609,7 +573,7 @@ export const people = [
     kultuur: 0.65,
     juured: 0.02,
     portrait: "portraits/dave-benton.jpg",
-    note: "Everybody. Aruba + Eesti.",
+    note: "Palmid ja päike Aruubalt",
   },
   {
     id: "cheburashka",
@@ -619,7 +583,6 @@ export const people = [
     kultuur: 0.61,
     juured: 0.02,
     portrait: "portraits/cheburashka.jpg",
-    note: "Nõukogude lapsepõlv.",
   },
   {
     id: "pipi-pikksukk",
@@ -629,7 +592,6 @@ export const people = [
     kultuur: 0.58,
     juured: 0.06,
     portrait: "portraits/pipi-pikksukk.jpg",
-    note: "Rootsi, aga meie riiulil.",
   },
   {
     id: "mart-avandi",
@@ -638,7 +600,7 @@ export const people = [
     temperament: 0.36,
     kultuur: 0.95,
     juured: 0.93,
-    note: "Tujurikkuja. Nägu on riik.",
+    portrait: "portraits/mart-avandi.jpg",
   },
   {
     id: "ott-sepp",
@@ -648,7 +610,6 @@ export const people = [
     kultuur: 0.91,
     juured: 0.93,
     portrait: "portraits/ott-sepp.jpg",
-    note: "Tujurikkuja. Teine nägu.",
   },
   {
     id: "edgar-savisaar",
@@ -658,7 +619,6 @@ export const people = [
     kultuur: 0.8,
     juured: 0.94,
     portrait: "portraits/edgar-savisaar.jpg",
-    note: "Poliitika kui folkloor.",
   },
   {
     id: "anu-saagim",
@@ -668,7 +628,6 @@ export const people = [
     kultuur: 0.78,
     juured: 0.88,
     portrait: "portraits/anu-saagim.jpg",
-    note: "Kroonika on kultuur.",
   },
   {
     id: "baruto",
@@ -678,7 +637,7 @@ export const people = [
     kultuur: 0.66,
     juured: 0.94,
     portrait: "portraits/baruto.jpg",
-    note: "Väike-Maarja. Jaapan.",
+    note: "Väike-Maarja yokozuna",
   },
   {
     id: "nublu",
@@ -688,7 +647,7 @@ export const people = [
     kultuur: 0.82,
     juured: 0.91,
     portrait: "portraits/nublu.jpg",
-    note: "Bussikõrvaklapid.",
+    note: "öölaps",
   },
   {
     id: "5miinust",
@@ -698,6 +657,6 @@ export const people = [
     kultuur: 0.84,
     juured: 0.9,
     portrait: "portraits/5miinust.jpg",
-    note: "Praegune bussisound.",
+    note: "narkootikumidest ei tea nad midagi",
   },
 ];

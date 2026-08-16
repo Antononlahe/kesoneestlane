@@ -18,6 +18,23 @@ export const buckets = [
     ],
   },
   {
+    id: "siin-kuulsad",
+    label: "Kohalikud kuulsused",
+    memberIds: [
+      "george-w-bush",
+      "dave-benton",
+      "cheburashka",
+      "pipi-pikksukk",
+      "mart-avandi",
+      "ott-sepp",
+      "edgar-savisaar",
+      "anu-saagim",
+      "baruto",
+      "nublu",
+      "5miinust",
+    ],
+  },
+  {
     id: "presidendid",
     label: "Eesti presidendid",
     memberIds: [
@@ -103,23 +120,6 @@ export const buckets = [
       "tolstoy",
       "hemingway",
       "kafka",
-    ],
-  },
-  {
-    id: "siin-kuulsad",
-    label: "Kohalikud kuulsused",
-    memberIds: [
-      "george-w-bush",
-      "dave-benton",
-      "cheburashka",
-      "pipi-pikksukk",
-      "mart-avandi",
-      "ott-sepp",
-      "edgar-savisaar",
-      "anu-saagim",
-      "baruto",
-      "nublu",
-      "5miinust",
     ],
   },
 ];

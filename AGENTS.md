@@ -10,6 +10,18 @@ npx --yes serve -l 4173
 
 Open `http://localhost:4173/`. Hard-refresh after data edits.
 
+## Deploy (Coolify / Hetzner)
+
+Static nginx:alpine. Idle RAM is a few MB; cap the app at **64 MB**.
+
+1. DNS: `kesoneestlane.zatkin.ee` A/CNAME to the same Coolify proxy as other zatkin.ee sites.
+2. Coolify → New Resource → Public repo `Antononlahe/kesoneestlane` → **Dockerfile**.
+3. Port `80`. Domain `https://kesoneestlane.zatkin.ee`.
+4. Resource limit: 64 MB RAM (128 MB if you want headroom). No build env vars.
+5. Deploy. Let's Encrypt is automatic once DNS hits the proxy.
+
+Local check: `docker build -t kesoneestlane . ; docker run --rm -p 4173:80 kesoneestlane`
+
 ## Stack
 
 Vanilla HTML/CSS/JS. Three.js r170 via import map (`cdn.jsdelivr`). OrbitControls, CSS2DRenderer, Line2 fat axes.
