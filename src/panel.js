@@ -27,7 +27,8 @@ export function showPerson(person) {
     photoEl.removeAttribute("src");
     photoEl.hidden = true;
   }
-  noteEl.textContent = person.note;
+  noteEl.textContent = person.note || "";
+  noteEl.hidden = !person.note;
   for (const key of ["valimus", "temperament", "kultuur"]) {
     bars[key].style.width = `${person[key] * 100}%`;
     nums[key].textContent = fmt(person[key]);
