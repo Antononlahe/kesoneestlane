@@ -1,7 +1,7 @@
 export const buckets = [
   {
     id: "viide",
-    label: "Viide",
+    label: "Alustuseks",
     memberIds: [
       "arvo-part",
       "lennart-meri",

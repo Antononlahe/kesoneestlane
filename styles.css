@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: clamp(16px, 0.7vw + 14px, 21px);
+}
+
 html,
 body {
   margin: 0;
@@ -34,10 +38,31 @@ body {
   display: block;
 }
 
+#atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    transparent 42%,
+    color-mix(in srgb, var(--night) 58%, transparent) 100%
+  );
+}
+
+#atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 .label2d {
   color: var(--bone);
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 11px;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -47,10 +72,10 @@ body {
 }
 
 .label2d.axis {
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 500;
   white-space: normal;
-  max-width: 9.5em;
+  max-width: 10em;
   text-align: center;
   line-height: 1.2;
 }
@@ -75,7 +100,7 @@ body {
 
 .eyebrow {
   margin: 0 0 6px;
-  font-size: 11px;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -84,7 +109,7 @@ body {
 h1 {
   margin: 0;
   font-family: "Newsreader", "Times New Roman", serif;
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(1.85rem, 4.6vw, 3.15rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -96,7 +121,7 @@ h1 {
 
 .legend {
   margin: 10px 0 0;
-  font-size: 12px;
+  font-size: 0.95rem;
   letter-spacing: 0.06em;
   text-transform: lowercase;
   color: var(--muted);
@@ -141,7 +166,7 @@ h1 {
 }
 
 .bucket-label {
-  font-size: 10px;
+  font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
@@ -162,14 +187,14 @@ h1 {
   max-width: min(280px, 70vw);
   padding: 8px 10px;
   letter-spacing: 0.04em;
-  font-size: 12px;
+  font-size: 0.95rem;
 }
 
 #reset {
   padding: 8px 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 0.82rem;
 }
 
 #reset:hover,
@@ -194,12 +219,12 @@ h1 {
   align-items: stretch;
   gap: 6px;
   pointer-events: auto;
-  width: min(240px, calc(100% - 52px));
+  width: min(280px, calc(100% - 52px));
 }
 
 .views-kicker {
   margin: 0 0 2px;
-  font-size: 10px;
+  font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
@@ -221,7 +246,7 @@ h1 {
   color: var(--bone);
   border: 1px solid color-mix(in srgb, var(--bone) 18%, transparent);
   font: inherit;
-  font-size: 11px;
+  font-size: 0.88rem;
   letter-spacing: 0.06em;
   text-transform: lowercase;
   cursor: pointer;
@@ -253,11 +278,11 @@ h1 {
     right: 12px;
     left: auto;
     bottom: auto;
-    width: min(210px, 58vw);
+    width: min(240px, 62vw);
   }
 
   .view-btn {
-    font-size: 10px;
+    font-size: 0.78rem;
     padding: 7px 8px;
   }
 }
@@ -268,7 +293,7 @@ h1 {
   padding: 6px 10px;
   background: color-mix(in srgb, var(--night) 82%, transparent);
   border: 1px solid color-mix(in srgb, var(--ice) 35%, transparent);
-  font-size: 12px;
+  font-size: 0.95rem;
   pointer-events: none;
   transform: translate(12px, 12px);
 }
@@ -278,7 +303,7 @@ h1 {
   z-index: 4;
   left: 26px;
   bottom: 26px;
-  width: min(340px, calc(100% - 52px));
+  width: min(380px, calc(100% - 52px));
   padding: 20px 22px 18px;
   background: color-mix(in srgb, var(--night) 78%, var(--baltic));
   border: 1px solid color-mix(in srgb, var(--bone) 16%, transparent);
@@ -292,13 +317,13 @@ h1 {
   right: 12px;
   width: 28px;
   height: 28px;
-  font-size: 20px;
+  font-size: 1.35rem;
   line-height: 1;
 }
 
 .panel-kicker {
   margin: 0;
-  font-size: 10px;
+  font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--rye);
@@ -324,7 +349,7 @@ h1 {
 #panel-name {
   margin: 0;
   font-family: "Newsreader", "Times New Roman", serif;
-  font-size: 28px;
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
   font-weight: 500;
   line-height: 1.1;
 }
@@ -332,7 +357,7 @@ h1 {
 #panel-note {
   margin: 0 0 16px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -345,7 +370,7 @@ h1 {
 }
 
 .meters dt {
-  font-size: 11px;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -385,7 +410,7 @@ h1 {
 
 .coords {
   margin: 14px 0 0;
-  font-size: 11px;
+  font-size: 0.85rem;
   letter-spacing: 0.04em;
   color: var(--muted);
 }
@@ -400,11 +425,11 @@ h1 {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
   }
 
   .legend {
-    font-size: 10px;
+    font-size: 0.82rem;
     gap: 6px 10px;
   }
 
@@ -419,5 +444,9 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+  }
+
+  #atmosphere::after {
+    opacity: 0.06;
   }
 }

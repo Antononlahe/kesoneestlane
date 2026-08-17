@@ -116,6 +116,7 @@ export async function createPerson(person) {
     new THREE.SpriteMaterial({
       map,
       transparent: true,
+      opacity: 1,
       depthWrite: false,
     }),
   );
@@ -167,7 +168,11 @@ export async function createPerson(person) {
 
   const dot = new THREE.Mesh(
     new THREE.SphereGeometry(0.05, 8, 8),
-    new THREE.MeshBasicMaterial({ color: color.hex }),
+    new THREE.MeshBasicMaterial({
+      color: color.hex,
+      transparent: true,
+      opacity: 1,
+    }),
   );
   dot.position.y = stemY;
   group.add(dot);
