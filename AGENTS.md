@@ -44,13 +44,12 @@ High score = named pole. Pairwise ranks (2026-08-16) mapped `score = round((1 - 
 
 - `index.html` — HUD, pair-view buttons, panel
 - `styles.css` — Baltic night tokens
-- `src/main.js` — scene, orbit, bucket swap, pair cameras (`FACE = 17.5`)
+- `src/main.js` — scene, orbit, pair cameras (`FACE = 17.5`)
 - `src/cube.js` — wireframe, fat axes, labels
-- `src/people.js` — everyone
-- `src/buckets.js` — dropdown hulks
-- `src/sprites.js` — portraits / stick figures
+- `src/people.js` — everyone (one list, no buckets)
+- `src/sprites.js` — portraits / stick figures; shrink when stacked
 - `src/panel.js` — click sheet
-- `src/pick.js` — raycast; ignore `#panel` `#reset` `#bucket` `#views`
+- `src/pick.js` — raycast; ignore `#panel` `#reset` `#views`
 - `portraits/` — local jpgs (Wikimedia / Commons / generated archetypes)
 
 ## People

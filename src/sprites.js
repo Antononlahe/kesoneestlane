@@ -121,7 +121,6 @@ export async function createPerson(person) {
     }),
   );
   const baseScale = person.portrait ? 0.95 : 1.02;
-  sprite.scale.set(baseScale, baseScale, 1);
   sprite.center.set(0.5, person.portrait ? 0.5 : 0.12);
   sprite.userData.person = person;
   group.add(sprite);
@@ -182,8 +181,47 @@ export async function createPerson(person) {
     toWorld(person.temperament),
     toWorld(person.kultuur),
   );
-  group.userData = { person, sprite, hit, ring, baseScale };
+  group.userData = {
+    person,
+    sprite,
+    hit,
+    ring,
+    baseScale,
+    appear: 1,
+    crowdScale: 1,
+    hovered: false,
+    selected: false,
+  };
+  applySpriteScale(group);
   return group;
+}
+
+export function applySpriteScale(group) {
+  const { sprite, baseScale, appear = 1, crowdScale = 1, hovered, selected } =
+    group.userData;
+  const hi = selected ? 1.22 : hovered ? 1.12 : 1;
+  const s = baseScale * (0.35 + 0.65 * appear) * crowdScale * hi;
+  sprite.scale.set(s, s, 1);
+}
+
+const CROWD_R2 = 1.45 * 1.45;
+
+export function updateCrowdScales(groups) {
+  const n = groups.length;
+  for (let i = 0; i < n; i++) {
+    let near = 0;
+    const a = groups[i].position;
+    for (let j = 0; j < n; j++) {
+      if (i === j) continue;
+      const b = groups[j].position;
+      const dx = a.x - b.x;
+      const dy = a.y - b.y;
+      const dz = a.z - b.z;
+      if (dx * dx + dy * dy + dz * dz < CROWD_R2) near += 1;
+    }
+    groups[i].userData.crowdScale = 1 - 0.48 * Math.min(1, near / 3);
+    applySpriteScale(groups[i]);
+  }
 }
 
 export function disposePerson(group) {
@@ -199,9 +237,10 @@ export function disposePerson(group) {
 }
 
 export function setPersonState(group, { hovered, selected }) {
-  const { sprite, ring, baseScale } = group.userData;
-  const scale = selected ? baseScale * 1.22 : hovered ? baseScale * 1.12 : baseScale;
-  sprite.scale.set(scale, scale, 1);
+  group.userData.hovered = hovered;
+  group.userData.selected = selected;
+  applySpriteScale(group);
+  const { ring } = group.userData;
   ring.visible = selected;
   ring.material.opacity = selected ? 0.9 : 0;
 }

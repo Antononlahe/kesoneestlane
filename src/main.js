@@ -4,8 +4,7 @@ import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
 import { palette, SIZE } from "./palette.js";
 import { createCube } from "./cube.js";
 import { people } from "./people.js";
-import { buckets } from "./buckets.js";
-import { createPerson, disposePerson } from "./sprites.js";
+import { createPerson, applySpriteScale, updateCrowdScales } from "./sprites.js";
 import { createPicker } from "./pick.js";
 import { bindPanelClose } from "./panel.js";
 
@@ -124,7 +123,7 @@ document.querySelectorAll(".view-btn").forEach((btn) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.target.closest("select, input, textarea")) return;
+  if (event.target.closest("input, textarea")) return;
   if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
   event.preventDefault();
   const dir = event.key === "ArrowRight" ? 1 : -1;
@@ -164,9 +163,6 @@ function tick() {
 
 tick();
 
-const byId = Object.fromEntries(people.map((p) => [p.id, p]));
-const live = new Map();
-let loadGen = 0;
 const floorY = -SIZE / 2;
 
 function setAppear(group, a) {
@@ -180,9 +176,8 @@ function setAppear(group, a) {
     if (obj === group.userData.ring) return;
     mat.opacity = mat.userData.baseOpacity * a;
   });
-  const { sprite, baseScale } = group.userData;
-  const s = baseScale * (0.35 + 0.65 * a);
-  sprite.scale.set(s, s, 1);
+  group.userData.appear = a;
+  applySpriteScale(group);
 }
 
 function startEnter(group) {
@@ -193,72 +188,21 @@ function startEnter(group) {
   setAppear(group, 0);
 }
 
-function startLeave(group) {
-  if (reduced) {
-    peopleGroup.remove(group);
-    disposePerson(group);
-    return;
-  }
-  group.userData.homeY = group.position.y;
-  group.userData.motion = { mode: "out", t: 0 };
-}
-
 function tickPeople() {
   for (const group of [...peopleGroup.children]) {
     const motion = group.userData.motion;
     if (!motion) continue;
     motion.t = Math.min(1, motion.t + 0.042);
     const k = 1 - (1 - motion.t) ** 3;
-    if (motion.mode === "in") {
-      group.position.y = floorY + (group.userData.homeY - floorY) * k;
-      setAppear(group, k);
-      if (motion.t >= 1) group.userData.motion = null;
-    } else {
-      group.position.y = group.userData.homeY + (floorY - group.userData.homeY) * k;
-      setAppear(group, 1 - k);
-      if (motion.t >= 1) {
-        peopleGroup.remove(group);
-        disposePerson(group);
-      }
-    }
+    group.position.y = floorY + (group.userData.homeY - floorY) * k;
+    setAppear(group, k);
+    if (motion.t >= 1) group.userData.motion = null;
   }
+  updateCrowdScales(peopleGroup.children);
 }
 
-const select = document.getElementById("bucket");
-for (const bucket of buckets) {
-  const opt = document.createElement("option");
-  opt.value = bucket.id;
-  opt.textContent = bucket.label;
-  select.appendChild(opt);
+for (const person of people) {
+  const group = await createPerson(person);
+  startEnter(group);
+  peopleGroup.add(group);
 }
-
-async function loadBucket(bucketId) {
-  const gen = ++loadGen;
-  picker.clear();
-  const bucket = buckets.find((b) => b.id === bucketId) ?? buckets[0];
-  const want = new Set(bucket.memberIds.filter((id) => byId[id]));
-
-  for (const [id, group] of [...live]) {
-    if (want.has(id)) continue;
-    live.delete(id);
-    startLeave(group);
-  }
-
-  for (const id of want) {
-    if (live.has(id)) continue;
-    const group = await createPerson(byId[id]);
-    if (gen !== loadGen) {
-      disposePerson(group);
-      continue;
-    }
-    startEnter(group);
-    peopleGroup.add(group);
-    live.set(id, group);
-  }
-}
-
-select.addEventListener("change", () => {
-  loadBucket(select.value);
-});
-
-await loadBucket("viide");

@@ -66,7 +66,6 @@ export function createPicker({ camera, peopleGroup, tooltip, onSelect }) {
     if (
       event.target.closest("#panel") ||
       event.target.closest("#reset") ||
-      event.target.closest("#bucket") ||
       event.target.closest("#views")
     ) {
       return;
